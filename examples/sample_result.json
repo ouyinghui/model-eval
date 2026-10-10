@@ -1,0 +1,96 @@
+{
+  "judge": "<judge-model>",
+  "btypes": [
+    "coding",
+    "math",
+    "long_text",
+    "creative",
+    "general"
+  ],
+  "table": {
+    "model-01": {
+      "coding": 10.0,
+      "math": 9.3,
+      "long_text": 9.0,
+      "creative": 8.5,
+      "general": 9.0
+    },
+    "model-02": {
+      "coding": 10.0,
+      "math": 9.7,
+      "long_text": 8.5,
+      "creative": 8.5,
+      "general": 9.5
+    },
+    "model-03": {
+      "coding": 8.7,
+      "math": 9.7,
+      "long_text": 8.5,
+      "creative": 7.5,
+      "general": 9.0
+    },
+    "model-04": {
+      "coding": 10.0,
+      "math": 10.0,
+      "long_text": 8.0,
+      "creative": 9.0,
+      "general": 9.0
+    },
+    "model-05": {
+      "coding": 6.0,
+      "math": 9.7,
+      "long_text": 9.0,
+      "creative": 0.0,
+      "general": null
+    },
+    "model-06": {
+      "coding": 10.0,
+      "math": 9.7,
+      "long_text": 8.5,
+      "creative": 8.0,
+      "general": 9.0
+    },
+    "model-07": {
+      "coding": 10.0,
+      "math": 10.0,
+      "long_text": 9.0,
+      "creative": 8.0,
+      "general": 9.0
+    },
+    "model-08": {
+      "coding": 9.3,
+      "math": 10.0,
+      "long_text": 8.0,
+      "creative": 8.0,
+      "general": 9.0
+    },
+    "model-09": {
+      "coding": 9.3,
+      "math": 10.0,
+      "long_text": 7.0,
+      "creative": 9.0,
+      "general": 9.0
+    },
+    "model-10": {
+      "coding": 9.3,
+      "math": 10.0,
+      "long_text": 8.5,
+      "creative": 9.0,
+      "general": 9.0
+    },
+    "model-11": {
+      "coding": 9.0,
+      "math": 10.0,
+      "long_text": 9.0,
+      "creative": 5.0,
+      "general": 9.0
+    },
+    "model-12": {
+      "coding": 9.7,
+      "math": 10.0,
+      "long_text": 8.0,
+      "creative": 5.5,
+      "general": 9.0
+    }
+  }
+}
