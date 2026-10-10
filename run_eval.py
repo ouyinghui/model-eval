@@ -51,33 +51,45 @@ def load_api_key(cli_key: str = "") -> str:
 
 
 def call_model(model: str, prompt: str, api_key: str, *, base_url: str = "",
-               system: str = "", max_tokens: int = 2048, timeout: int = 180) -> dict:
-    """调一次 chat completion, 返回 {text, error, ms}"""
+               system: str = "", max_tokens: int = 2048, timeout: int = 180,
+               retries: int = 3) -> dict:
+    """调一次 chat completion, 返回 {text, error, ms}。429/5xx 自动退避重试。"""
     import time
     base = (base_url or API_BASE).rstrip("/")
     msgs = ([{"role": "system", "content": system}] if system else []) + \
            [{"role": "user", "content": prompt}]
     body = {"model": model, "messages": msgs, "max_tokens": max_tokens}
-    req = urllib.request.Request(
-        f"{base}/chat/completions",
-        data=json.dumps(body).encode(),
-        headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
-    )
     t0 = time.time()
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as r:
-            data = json.loads(r.read())
-        msg = data["choices"][0]["message"]
-        text = msg.get("content") or ""
-        # 思考模型: reasoning 占满 token 时 content 可能为空, 回退 reasoning_content
-        if not text.strip() and msg.get("reasoning_content"):
-            text = msg["reasoning_content"]
-        return {"text": text, "error": None, "ms": int((time.time() - t0) * 1000)}
-    except urllib.error.HTTPError as e:
-        return {"text": "", "error": f"HTTP {e.code}: {e.read()[:200].decode(errors='ignore')}",
-                "ms": int((time.time() - t0) * 1000)}
-    except Exception as e:
-        return {"text": "", "error": str(e)[:200], "ms": int((time.time() - t0) * 1000)}
+    last_err = ""
+    for attempt in range(retries + 1):
+        req = urllib.request.Request(
+            f"{base}/chat/completions",
+            data=json.dumps(body).encode(),
+            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                data = json.loads(r.read())
+            msg = data["choices"][0]["message"]
+            text = msg.get("content") or ""
+            # 思考模型: reasoning 占满 token 时 content 可能为空, 回退 reasoning_content
+            if not text.strip() and msg.get("reasoning_content"):
+                text = msg["reasoning_content"]
+            return {"text": text, "error": None, "ms": int((time.time() - t0) * 1000)}
+        except urllib.error.HTTPError as e:
+            last_err = f"HTTP {e.code}: {e.read()[:150].decode(errors='ignore')}"
+            # 429(限流) / 5xx(服务端): 退避重试
+            if e.code in (429, 500, 502, 503, 504) and attempt < retries:
+                time.sleep(2 ** attempt * 2)  # 2,4,8s
+                continue
+            break
+        except Exception as e:
+            last_err = str(e)[:200]
+            if attempt < retries:
+                time.sleep(2 ** attempt)
+                continue
+            break
+    return {"text": "", "error": last_err, "ms": int((time.time() - t0) * 1000)}
 
 
 JUDGE_SYSTEM = """你是严格的 AI 模型质量评估裁判。给你一个任务、评分要点(rubric)、可选的参考答案(expect)、以及模型的回答。
@@ -135,7 +147,7 @@ def main() -> int:
     ap.add_argument("--api-base", default="", help=f"API 端点 (默认 {API_BASE})")
     ap.add_argument("--api-key", default="", help="API key (或用 env EVAL_API_KEY)")
     ap.add_argument("--limit", type=int, help="每类别最多跑几题")
-    ap.add_argument("--workers", type=int, default=4)
+    ap.add_argument("--workers", type=int, default=3, help="并发数 (太高会触发 429 限流, 建议 2-3)")
     ap.add_argument("--timeout", type=int, default=180, help="单次调用超时秒")
     ap.add_argument("--out", default=str(HERE / "eval_result.json"))
     ap.add_argument("--dry-run", action="store_true")
