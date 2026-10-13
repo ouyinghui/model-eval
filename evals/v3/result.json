@@ -1,0 +1,1538 @@
+{
+  "judge": "Gcable-Max-Thinking",
+  "btypes": [
+    "coding",
+    "math",
+    "long_text",
+    "creative",
+    "general"
+  ],
+  "table": {
+    "Gcable-Plus-Thinking": {
+      "coding": 8.2,
+      "math": 8.8,
+      "long_text": 6.5,
+      "creative": 5.5,
+      "general": 9.0
+    },
+    "Gcable-Plus": {
+      "coding": 9.8,
+      "math": 9.8,
+      "long_text": 8.5,
+      "creative": 8.0,
+      "general": 8.7
+    },
+    "Gcable-Pro": {
+      "coding": 9.8,
+      "math": 9.8,
+      "long_text": 9.0,
+      "creative": 8.5,
+      "general": 7.7
+    },
+    "Gcable-Pro-Thinking": {
+      "coding": 7.2,
+      "math": 9.0,
+      "long_text": 9.0,
+      "creative": 9.0,
+      "general": 9.0
+    },
+    "Gcable-Max": {
+      "coding": 10.0,
+      "math": 10.0,
+      "long_text": 8.0,
+      "creative": 8.0,
+      "general": 9.0
+    },
+    "Gcable-Max-Thinking": {
+      "coding": 10.0,
+      "math": 10.0,
+      "long_text": 9.0,
+      "creative": 9.0,
+      "general": 8.7
+    },
+    "Gcable-Pro-Thinking-Max": {
+      "coding": 9.2,
+      "math": 9.2,
+      "long_text": 9.0,
+      "creative": 5.5,
+      "general": 9.0
+    },
+    "GLM-5.1": {
+      "coding": 9.8,
+      "math": 10.0,
+      "long_text": 8.0,
+      "creative": 8.0,
+      "general": 8.7
+    },
+    "GLM-5.1-Instant": {
+      "coding": 10.0,
+      "math": 9.8,
+      "long_text": 8.5,
+      "creative": 9.0,
+      "general": 9.0
+    },
+    "GLM-5.2": {
+      "coding": 10.0,
+      "math": 10.0,
+      "long_text": 8.5,
+      "creative": 9.0,
+      "general": 9.3
+    },
+    "GLM-5.2-High": {
+      "coding": 10.0,
+      "math": 10.0,
+      "long_text": 9.0,
+      "creative": 8.5,
+      "general": 8.7
+    },
+    "GLM-5.2-Max": {
+      "coding": 10.0,
+      "math": 10.0,
+      "long_text": 5.5,
+      "creative": null,
+      "general": null
+    }
+  },
+  "detail": [
+    {
+      "btype": "coding",
+      "id": "code-1",
+      "model": "Gcable-Pro",
+      "score": 10.0,
+      "judge_reason": "算法正确处理连续子数组，四类边界齐全，O(n)复杂度，注释清晰可运行",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-1",
+      "model": "Gcable-Plus",
+      "score": 10.0,
+      "judge_reason": "正确实现连续子数组扫描，四类边界全覆盖，O(n)复杂度，处理末段更新和并列取首个，代码可运行",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-1",
+      "model": "Gcable-Max",
+      "score": 10.0,
+      "judge_reason": "正确理解连续性，4类边界全覆盖，O(n)可运行，说明清晰",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-1",
+      "model": "Gcable-Plus-Thinking",
+      "score": 10.0,
+      "judge_reason": "算法正确(连续+严格递增)，4类边界全处理且附测试，O(n)/O(1)，无可扣分点",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-1",
+      "model": "Gcable-Max-Thinking",
+      "score": 10.0,
+      "judge_reason": "正确理解连续递增，代码可运行，四类边界全覆盖，复杂度O(n)/O(1)，说明清晰",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-1",
+      "model": "Gcable-Pro-Thinking",
+      "score": 4.0,
+      "judge_reason": "理解正确非LIS，但代码在for循环处截断，无法运行，单元素/全递减等边界未验证",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-1",
+      "model": "GLM-5.1",
+      "score": 9.0,
+      "judge_reason": "正确理解连续递增，四类边界全覆盖，代码可运行且O(n)，测试完善，无明显扣分点",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-1",
+      "model": "Gcable-Pro-Thinking-Max",
+      "score": 8.0,
+      "judge_reason": "算法正确、四类边界齐全、O(n)，但示例输出[2,4,6]与代码“返回最先出现”规则自相矛盾",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-1",
+      "model": "GLM-5.1-Instant",
+      "score": 10.0,
+      "judge_reason": "正确实现连续递增子序列，4类边界全覆盖，代码可运行，O(n)复杂度，并明确区分了LIS",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-1",
+      "model": "GLM-5.2",
+      "score": 10.0,
+      "judge_reason": "正确理解连续递增，四类边界全覆盖，O(n)可运行，附测试与说明，无扣分点",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-1",
+      "model": "GLM-5.2-High",
+      "score": 10.0,
+      "judge_reason": "正确实现连续递增子序列，四类边界全覆盖，O(n)复杂度，含测试与说明，无扣分点",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-2",
+      "model": "Gcable-Plus-Thinking",
+      "score": 10.0,
+      "judge_reason": "准确指出可变默认参数陷阱，输出、原因、None哨兵修复均完全正确",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-2",
+      "model": "Gcable-Plus",
+      "score": 10.0,
+      "judge_reason": "输出正确、根因解释清晰、给出None哨兵标准修法，完全符合rubric",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-2",
+      "model": "Gcable-Pro",
+      "score": 10.0,
+      "judge_reason": "正确指出可变默认参数陷阱，输出与分析准确，None哨兵修法及原理说明完整。",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-2",
+      "model": "Gcable-Max",
+      "score": 10.0,
+      "judge_reason": "输出、原因、None哨兵修法全部正确，无扣分点",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-2",
+      "model": "Gcable-Pro-Thinking",
+      "score": 10.0,
+      "judge_reason": "准确指出可变默认参数陷阱，输出与修复均正确",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-1",
+      "model": "GLM-5.2-Max",
+      "score": 0.0,
+      "judge_reason": "空回答/调用失败",
+      "gen_error": "empty response (重算)"
+    },
+    {
+      "btype": "coding",
+      "id": "code-2",
+      "model": "Gcable-Max-Thinking",
+      "score": 10.0,
+      "judge_reason": "完全正确：输出、原因、None哨兵修复均准确，还补充is None判断等细节",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-2",
+      "model": "Gcable-Pro-Thinking-Max",
+      "score": 10.0,
+      "judge_reason": "准确指出可变默认参数陷阱，输出与修法均正确，解释清晰",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-2",
+      "model": "GLM-5.1",
+      "score": 10.0,
+      "judge_reason": "输出正确、原因解释清晰、None哨兵修复规范，还补充is None细节",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-2",
+      "model": "GLM-5.1-Instant",
+      "score": 10.0,
+      "judge_reason": "正确指出可变默认参数陷阱、输出结果、原因和None哨兵修法，完整准确。",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-2",
+      "model": "GLM-5.2",
+      "score": 10.0,
+      "judge_reason": "完全正确：输出、原因、None哨兵修法均准确，还补充了is None细节和time.time()类比，无扣分点。",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-2",
+      "model": "GLM-5.2-High",
+      "score": 10.0,
+      "judge_reason": "输出正确、机制解释透彻、给出None哨兵修法并指出is not None细节，全部命中要点",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-3",
+      "model": "Gcable-Plus",
+      "score": 9.0,
+      "judge_reason": "dict+双向链表实现正确，含哨兵节点，get/put均O(1)，淘汰逻辑正确；缺少独立复杂度分析说明",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-2",
+      "model": "GLM-5.2-Max",
+      "score": 10.0,
+      "judge_reason": "输出、原因、None哨兵修法均正确，还解释__defaults__机制及is None细节，超出要求",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-3",
+      "model": "Gcable-Plus-Thinking",
+      "score": 6.0,
+      "judge_reason": "实现正确且解释清楚，但输出是草稿式思考过程，含大量无关元话语，无规范代码块",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-3",
+      "model": "Gcable-Pro",
+      "score": 10.0,
+      "judge_reason": "dict+双向链表+哨兵节点实现正确，get/put均真O(1)，淘汰逻辑无误，解释清晰含测试",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-3",
+      "model": "Gcable-Max",
+      "score": 10.0,
+      "judge_reason": "哈希表+双向链表实现正确，哑节点处理边界，淘汰与更新逻辑无误，O(1)论证充分，并附OrderedDict补充",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-3",
+      "model": "Gcable-Pro-Thinking",
+      "score": 9.0,
+      "judge_reason": "dict+双向链表实现正确，get/put均O(1)，淘汰逻辑清晰，解释充分；仅开头混入冗余思考文字",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-3",
+      "model": "Gcable-Max-Thinking",
+      "score": 10.0,
+      "judge_reason": "双向链表+哈希与OrderedDict两种实现均正确，哨兵优化，淘汰逻辑无误，O(1)解释清晰到位",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-3",
+      "model": "GLM-5.1",
+      "score": 10.0,
+      "judge_reason": "双向链表+哈希实现正确，哑节点处理边界，get/put均O(1)，逐操作复杂度解释清晰",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-3",
+      "model": "Gcable-Pro-Thinking-Max",
+      "score": 9.0,
+      "judge_reason": "双链表+哈希实现正确，含O(1)解释和OrderedDict版，仅开头泄漏了推理过程",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-3",
+      "model": "GLM-5.1-Instant",
+      "score": 10.0,
+      "judge_reason": "双向链表+哈希实现正确，哨兵简化边界，淘汰逻辑无误，解释详尽清晰",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-3",
+      "model": "GLM-5.2",
+      "score": 10.0,
+      "judge_reason": "双向链表+哈希实现正确，哑节点处理边界，淘汰逻辑无误，O(1)解释详尽，含测试与对比分析。",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-3",
+      "model": "GLM-5.2-High",
+      "score": 10.0,
+      "judge_reason": "双向链表+哈希实现正确，边界处理完善，O(1)解释清晰，另附OrderedDict版本，无扣分点",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-3",
+      "model": "GLM-5.2-Max",
+      "score": 0.0,
+      "judge_reason": "空回答/调用失败",
+      "gen_error": "empty response (重算)"
+    },
+    {
+      "btype": "coding",
+      "id": "code-hard",
+      "model": "Gcable-Plus",
+      "score": 10.0,
+      "judge_reason": "转移方程正确，双行滚动数组且短串做列实现O(min(m,n))，复杂度分析准确，还附单数组优化与验证测试。",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-hard",
+      "model": "Gcable-Plus-Thinking",
+      "score": 7.0,
+      "judge_reason": "转移方程和单行滚动优化正确且换串保证O(min)空间，但输出是思考草稿，含大量无关元叙述且未完整收尾",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-hard",
+      "model": "Gcable-Max",
+      "score": 10.0,
+      "judge_reason": "转移方程正确，单行滚动数组+prev保存左上角，O(min(m,n))空间分析准确，附测试与扩展",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-hard",
+      "model": "Gcable-Pro",
+      "score": 9.0,
+      "judge_reason": "转移正确、双行/单数组真优化、O(min)空间、分析完整，末尾轻微截断",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-hard",
+      "model": "Gcable-Pro-Thinking",
+      "score": 6.0,
+      "judge_reason": "思路、转移方程和空间优化说明正确，但代码在初始化处截断，实现不完整",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-hard",
+      "model": "GLM-5.1",
+      "score": 10.0,
+      "judge_reason": "转移正确，单行滚动+prev优化优于两行，min(m,n)取短串，复杂度分析准确，附测试。",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-hard",
+      "model": "Gcable-Max-Thinking",
+      "score": 10.0,
+      "judge_reason": "转移方程正确，单行滚动+prev_diag 实现真正的 O(min(m,n)) 空间，复杂度分析准确，测试完备且含进阶优",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-hard",
+      "model": "Gcable-Pro-Thinking-Max",
+      "score": 10.0,
+      "judge_reason": "转移方程正确，用一维滚动数组并通过交换保证O(min(m,n))空间，复杂度分析准确完整",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-hard",
+      "model": "GLM-5.1-Instant",
+      "score": 10.0,
+      "judge_reason": "转移方程正确，单行滚动数组达O(min(m,n))，复杂度分析与优化说明完整准确",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-hard",
+      "model": "GLM-5.2",
+      "score": 10.0,
+      "judge_reason": "转移方程正确，单行滚动+prev_diag技巧，取短串做列，复杂度分析准确，还提及Myers/Hirschberg扩展",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-hard",
+      "model": "GLM-5.2-High",
+      "score": 10.0,
+      "judge_reason": "转移方程正确，单行滚动+prev_diag无错误，交换串保证O(min(m,n))空间，复杂度分析准确，讲解清晰。",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-1",
+      "model": "Gcable-Plus-Thinking",
+      "score": 9.0,
+      "judge_reason": "列式正确，正确判断净流出且永远注不满，仅附加排空信息略有冗余",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-1",
+      "model": "Gcable-Plus",
+      "score": 10.0,
+      "judge_reason": "列式、通分、结果-1/12及'永远注不满'结论均正确，无扣分点",
+      "gen_error": null
+    },
+    {
+      "btype": "coding",
+      "id": "code-hard",
+      "model": "GLM-5.2-Max",
+      "score": 0.0,
+      "judge_reason": "空回答/调用失败",
+      "gen_error": "empty response (重算)"
+    },
+    {
+      "btype": "math",
+      "id": "math-1",
+      "model": "Gcable-Pro",
+      "score": 10.0,
+      "judge_reason": "列式正确，算得-1/12并判断净流出、永远注不满，结论完整",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-1",
+      "model": "Gcable-Max",
+      "score": 10.0,
+      "judge_reason": "列式、通分、负值判断全部正确，明确指出永远注不满，符合参考答案。",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-1",
+      "model": "Gcable-Max-Thinking",
+      "score": 10.0,
+      "judge_reason": "列式、通分、正负判断与结论全部正确，且指出净流出永远注不满",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-1",
+      "model": "GLM-5.1",
+      "score": 10.0,
+      "judge_reason": "列式正确、通分得-1/12、正确判断净流出且永不注满，完全符合参考答案。",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-1",
+      "model": "Gcable-Pro-Thinking",
+      "score": 10.0,
+      "judge_reason": "列式、通分计算、判断净流出且明确'无法注满'，完全正确。",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-1",
+      "model": "GLM-5.1-Instant",
+      "score": 9.0,
+      "judge_reason": "列式与计算正确，明确指出净流出且永远注不满；附加假设性说明略显多余但未影响结论",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-1",
+      "model": "GLM-5.2",
+      "score": 10.0,
+      "judge_reason": "列式、通分、负值判断与结论均正确，明确指出永远注不满",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-1",
+      "model": "Gcable-Pro-Thinking-Max",
+      "score": 10.0,
+      "judge_reason": "列式、通分、判断净流出均正确，结论明确指出永远注满不了，无扣分点",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-1",
+      "model": "GLM-5.2-High",
+      "score": 10.0,
+      "judge_reason": "列式正确，算得-1/12并正确判断净流出、永远注不满，完全符合rubric。",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-2",
+      "model": "Gcable-Plus",
+      "score": 9.0,
+      "judge_reason": "解法完全正确, 步骤清晰, 还指出不均匀绳长度未必一半, 无违规操作",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-1",
+      "model": "GLM-5.2-Max",
+      "score": 10.0,
+      "judge_reason": "列式、通分、负值判断全对，明确指出注不满，无红线命中",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-2",
+      "model": "Gcable-Plus-Thinking",
+      "score": 10.0,
+      "judge_reason": "经典解法完全正确，步骤清晰，解释了不均匀性不影响对烧原理",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-2",
+      "model": "Gcable-Pro",
+      "score": 10.0,
+      "judge_reason": "步骤完全正确：A两端+B一端同点，A尽时点B另一端，30+15=45分钟，说明清晰无违规",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-2",
+      "model": "Gcable-Max",
+      "score": 10.0,
+      "judge_reason": "步骤完整正确：A两端烧30min，再点B另一端15min，合计45min，无违规操作",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-2",
+      "model": "Gcable-Max-Thinking",
+      "score": 10.0,
+      "judge_reason": "解法完全正确，步骤清晰，解释了原理且无违规操作",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-2",
+      "model": "GLM-5.1",
+      "score": 10.0,
+      "judge_reason": "完全正确的经典解法，步骤清晰，原理说明到位，无违规操作。",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-2",
+      "model": "Gcable-Pro-Thinking-Max",
+      "score": 10.0,
+      "judge_reason": "步骤完整正确：两端烧30min后点燃另一端再15min，逻辑清晰无违规操作。",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-2",
+      "model": "Gcable-Pro-Thinking",
+      "score": 9.0,
+      "judge_reason": "给出经典完整解法：双端烧A计30分钟，再点B另一端余15分钟，步骤正确，仅结尾略冗长截断。",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-2",
+      "model": "GLM-5.1-Instant",
+      "score": 10.0,
+      "judge_reason": "步骤完整正确，经典解法，含关键洞察和时间线，无违规操作",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-2",
+      "model": "GLM-5.2",
+      "score": 10.0,
+      "judge_reason": "完整正确的经典解法，步骤清晰，含时间线，无违规操作",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-2",
+      "model": "GLM-5.2-High",
+      "score": 10.0,
+      "judge_reason": "解法完全正确，步骤清晰，正确处理不均匀性，无违禁操作",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-3",
+      "model": "Gcable-Plus-Thinking",
+      "score": 10.0,
+      "judge_reason": "容斥原理计算正确，40+35-25=50，60-50=10，过程清晰完整",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-3",
+      "model": "Gcable-Plus",
+      "score": 10.0,
+      "judge_reason": "答案正确，容斥原理计算清晰，还附验证过程，完全符合评分要点。",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-3",
+      "model": "Gcable-Pro",
+      "score": 10.0,
+      "judge_reason": "容斥原理应用正确，计算过程清晰，答案为10人，完全符合参考答案。",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-3",
+      "model": "Gcable-Max",
+      "score": 10.0,
+      "judge_reason": "容斥原理计算正确，过程清晰，答案为10人。",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-3",
+      "model": "Gcable-Pro-Thinking",
+      "score": 10.0,
+      "judge_reason": "容斥原理应用正确，计算过程清晰，答案为10人，完全符合参考答案",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-3",
+      "model": "Gcable-Max-Thinking",
+      "score": 10.0,
+      "judge_reason": "答案正确(10人)，计算过程清晰，含容斥原理和验证",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-3",
+      "model": "GLM-5.1",
+      "score": 10.0,
+      "judge_reason": "容斥原理运用正确，计算过程清晰，答案为10人，完全符合参考答案。",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-3",
+      "model": "GLM-5.1-Instant",
+      "score": 10.0,
+      "judge_reason": "答案正确为10人，容斥原理应用准确，过程清晰完整。",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-3",
+      "model": "GLM-5.2",
+      "score": 10.0,
+      "judge_reason": "答案正确为10人，容斥原理计算过程完整清晰。",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-3",
+      "model": "Gcable-Pro-Thinking-Max",
+      "score": 10.0,
+      "judge_reason": "容斥原理计算正确，答案为10，过程清晰完整。",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-3",
+      "model": "GLM-5.2-High",
+      "score": 10.0,
+      "judge_reason": "答案正确为10人，容斥原理计算清晰，还附表格验证，无扣分点。",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-2",
+      "model": "GLM-5.2-Max",
+      "score": 0.0,
+      "judge_reason": "空回答/调用失败",
+      "gen_error": "empty response (重算)"
+    },
+    {
+      "btype": "math",
+      "id": "math-3",
+      "model": "GLM-5.2-Max",
+      "score": 10.0,
+      "judge_reason": "容斥原理计算正确，过程清晰含验证，答案为10人",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-hard",
+      "model": "Gcable-Plus",
+      "score": 10.0,
+      "judge_reason": "主路径与备选路径均正确，表格清晰可执行，通用思路涵盖贝祖定理、双策略与状态空间搜索，完整严谨",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-hard",
+      "model": "Gcable-Pro",
+      "score": 9.0,
+      "judge_reason": "步骤正确完整得到4L，通用思路(BFS/gcd/扩展欧几里得)阐述全面，仅扩展欧几里得部分略显冗余含糊",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-hard",
+      "model": "Gcable-Plus-Thinking",
+      "score": 6.0,
+      "judge_reason": "步骤正确可得4L并提及BFS/gcd思路，但回答是未完成的草稿推理，中途截断，非规范完整答案",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-hard",
+      "model": "Gcable-Max",
+      "score": 10.0,
+      "judge_reason": "步骤正确完整可得4L，含表格验证，通用思路覆盖BFS状态搜索与gcd可解性判断，超出要求",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-hard",
+      "model": "Gcable-Pro-Thinking",
+      "score": 7.0,
+      "judge_reason": "步骤正确可达4L且含BFS与gcd通用思路，但回答呈草稿状态、结尾截断、中英混杂不完整",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-hard",
+      "model": "Gcable-Max-Thinking",
+      "score": 10.0,
+      "judge_reason": "步骤与参考答案完全一致且带状态表格，通用思路覆盖丢番图方程与BFS状态搜索，内容完整准确。",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-hard",
+      "model": "GLM-5.1",
+      "score": 10.0,
+      "judge_reason": "步骤正确清晰，表格可执行，通用思路覆盖BFS与数论可解性，全面准确。",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-hard",
+      "model": "Gcable-Pro-Thinking-Max",
+      "score": 7.0,
+      "judge_reason": "步骤正确可得4L，含BFS和gcd通用思路，但输出泄露英文思考过程，格式混乱不完整",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-hard",
+      "model": "GLM-5.1-Instant",
+      "score": 10.0,
+      "judge_reason": "两种方法步骤均正确且完整，通用思路涵盖BFS状态搜索与裴蜀定理，全面准确",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-hard",
+      "model": "GLM-5.2",
+      "score": 10.0,
+      "judge_reason": "两种正确解法步骤完整，含BFS状态搜索与裴蜀定理解释，超出rubric要求",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-hard",
+      "model": "GLM-5.2-High",
+      "score": 10.0,
+      "judge_reason": "步骤正确得到4L，含对称解法；通用思路涵盖BFS状态搜索、gcd可解性判定与手工技巧，完整准确。",
+      "gen_error": null
+    },
+    {
+      "btype": "math",
+      "id": "math-hard",
+      "model": "GLM-5.2-Max",
+      "score": 0.0,
+      "judge_reason": "空回答/调用失败",
+      "gen_error": "empty response (重算)"
+    },
+    {
+      "btype": "long_text",
+      "id": "long-1",
+      "model": "Gcable-Plus",
+      "score": 8.0,
+      "judge_reason": "(解析异常) {\"score\": 8, \"reason\": \"类比贴切、结构清晰、无未解释术语",
+      "gen_error": null
+    },
+    {
+      "btype": "long_text",
+      "id": "long-1",
+      "model": "Gcable-Pro",
+      "score": 9.0,
+      "judge_reason": "餐厅服务员类比贴切，结构清晰通俗，长度合适，仅个别措辞略显冗余",
+      "gen_error": null
+    },
+    {
+      "btype": "long_text",
+      "id": "long-1",
+      "model": "Gcable-Max",
+      "score": 7.0,
+      "judge_reason": "类比贴切、通俗清晰、无术语堆砌，但全文约400字明显超出250字要求，长度不合规。",
+      "gen_error": null
+    },
+    {
+      "btype": "long_text",
+      "id": "long-1",
+      "model": "Gcable-Plus-Thinking",
+      "score": 3.0,
+      "judge_reason": "输出全是内部草稿与字数统计过程，未交付干净的成文，答案埋在草稿中，结构混乱",
+      "gen_error": null
+    },
+    {
+      "btype": "long_text",
+      "id": "long-1",
+      "model": "Gcable-Max-Thinking",
+      "score": 9.0,
+      "judge_reason": "餐厅服务员类比贴切贯穿全文，结构清晰、无术语堆砌，通俗度高，长度约280字符合要求。",
+      "gen_error": null
+    },
+    {
+      "btype": "long_text",
+      "id": "long-1",
+      "model": "GLM-5.1",
+      "score": 7.0,
+      "judge_reason": "类比贴切、结构清晰、无术语堆砌，但全文约430字明显超出200-300字要求",
+      "gen_error": null
+    },
+    {
+      "btype": "long_text",
+      "id": "long-1",
+      "model": "GLM-5.1-Instant",
+      "score": 8.0,
+      "judge_reason": "类比贴切、结构清晰、无术语堆砌，但篇幅约400字超出200-300字要求",
+      "gen_error": null
+    },
+    {
+      "btype": "long_text",
+      "id": "long-1",
+      "model": "Gcable-Pro-Thinking-Max",
+      "score": 9.0,
+      "judge_reason": "类比贴切清晰，术语零堆砌，结构完整，字数约240字符合要求，无明显扣分点",
+      "gen_error": null
+    },
+    {
+      "btype": "long_text",
+      "id": "long-1",
+      "model": "GLM-5.2",
+      "score": 8.0,
+      "judge_reason": "类比贴切、结构清晰、无术语堆砌，但篇幅约400字超出200-300字要求",
+      "gen_error": null
+    },
+    {
+      "btype": "long_text",
+      "id": "long-1",
+      "model": "Gcable-Pro-Thinking",
+      "score": 9.0,
+      "judge_reason": "类比贴切、通俗无术语、结构清晰、长度合适，几乎无扣分点",
+      "gen_error": null
+    },
+    {
+      "btype": "long_text",
+      "id": "long-1",
+      "model": "GLM-5.2-High",
+      "score": 9.0,
+      "judge_reason": "类比贴切、结构清晰、无未解释术语、篇幅合适，说明准确流畅，几乎无可挑剔。",
+      "gen_error": null
+    },
+    {
+      "btype": "long_text",
+      "id": "long-2",
+      "model": "Gcable-Plus",
+      "score": 9.0,
+      "judge_reason": "三条均可执行且含明确理由，量化风险、聚焦下周重点有亮点，无空话套话",
+      "gen_error": null
+    },
+    {
+      "btype": "long_text",
+      "id": "long-2",
+      "model": "Gcable-Plus-Thinking",
+      "score": 10.0,
+      "judge_reason": "三条均具体可执行、含量化示例、每条附明确理由，无空话套话",
+      "gen_error": null
+    },
+    {
+      "btype": "long_text",
+      "id": "long-2",
+      "model": "Gcable-Pro",
+      "score": 9.0,
+      "judge_reason": "三条均务实可执行，含具体示例和理由，无空话，完全符合要求",
+      "gen_error": null
+    },
+    {
+      "btype": "long_text",
+      "id": "long-2",
+      "model": "Gcable-Max",
+      "score": 9.0,
+      "judge_reason": "三条均具体可执行且含理由，如'5分钟读完'、'暴露风险附支持'，务实无空话。",
+      "gen_error": null
+    },
+    {
+      "btype": "long_text",
+      "id": "long-1",
+      "model": "GLM-5.2-Max",
+      "score": 1.0,
+      "judge_reason": "回答被截断，仅有开头半句话，未完成说明，答非所问",
+      "gen_error": null
+    },
+    {
+      "btype": "long_text",
+      "id": "long-2",
+      "model": "Gcable-Pro-Thinking",
+      "score": 9.0,
+      "judge_reason": "三条均务实可执行且含理由，无空话，仅略显常规",
+      "gen_error": null
+    },
+    {
+      "btype": "long_text",
+      "id": "long-2",
+      "model": "Gcable-Max-Thinking",
+      "score": 9.0,
+      "judge_reason": "三条均务实可执行且含清晰理由，有具体格式示例，无空话，仅个别表述略泛",
+      "gen_error": null
+    },
+    {
+      "btype": "long_text",
+      "id": "long-2",
+      "model": "GLM-5.1",
+      "score": 9.0,
+      "judge_reason": "三条均务实可执行且附理由，如数据化、标状态、限篇幅，无空话套话",
+      "gen_error": null
+    },
+    {
+      "btype": "long_text",
+      "id": "long-2",
+      "model": "GLM-5.1-Instant",
+      "score": 9.0,
+      "judge_reason": "三条均具体可执行且含清晰理由，无空话，仅个别表述略显常规",
+      "gen_error": null
+    },
+    {
+      "btype": "long_text",
+      "id": "long-2",
+      "model": "Gcable-Pro-Thinking-Max",
+      "score": 9.0,
+      "judge_reason": "三条均具体可执行且含清晰理由，无空话，仅第一条'为什么'稍简略",
+      "gen_error": null
+    },
+    {
+      "btype": "long_text",
+      "id": "long-2",
+      "model": "GLM-5.2",
+      "score": 9.0,
+      "judge_reason": "三条均务实可执行且含'为什么'，有具体格式与数据示例，无空话，仅第三条稍显常规",
+      "gen_error": null
+    },
+    {
+      "btype": "long_text",
+      "id": "long-2",
+      "model": "GLM-5.2-High",
+      "score": 9.0,
+      "judge_reason": "三条均具体可执行且含理由，附落地模板，无空话，仅略超一页篇幅要求",
+      "gen_error": null
+    },
+    {
+      "btype": "creative",
+      "id": "creative-1",
+      "model": "Gcable-Plus-Thinking",
+      "score": 9.0,
+      "judge_reason": "意象鲜活含蓄，'饭团排队''雨折碎街灯'画面感强，仅'一秒钟的早晨'稍显直露",
+      "gen_error": null
+    },
+    {
+      "btype": "creative",
+      "id": "creative-1",
+      "model": "Gcable-Plus",
+      "score": 8.0,
+      "judge_reason": "画面具体、意象含蓄，结尾有力；个别搭配略生硬如时间在脚尖凝固",
+      "gen_error": null
+    },
+    {
+      "btype": "creative",
+      "id": "creative-1",
+      "model": "Gcable-Pro",
+      "score": 8.0,
+      "judge_reason": "画面具体、情绪含蓄，语言有质感。'黄昏'与深夜略矛盾，个别意象稍套路，扣1-2分。",
+      "gen_error": null
+    },
+    {
+      "btype": "creative",
+      "id": "creative-1",
+      "model": "Gcable-Pro-Thinking",
+      "score": 9.0,
+      "judge_reason": "意象新颖含蓄，'热汤翻身''塑料袋练习出门'等画面独特，结尾余韵悠长，未触红线。",
+      "gen_error": null
+    },
+    {
+      "btype": "long_text",
+      "id": "long-2",
+      "model": "GLM-5.2-Max",
+      "score": 10.0,
+      "judge_reason": "三条均务实可执行、含具体示例与明确理由，无空话，完全符合rubric",
+      "gen_error": null
+    },
+    {
+      "btype": "creative",
+      "id": "creative-1",
+      "model": "Gcable-Pro-Thinking-Max",
+      "score": 9.0,
+      "judge_reason": "(解析异常) {\"score\": 9, \"reason\": \"画面具体克制，药盒放回货架含蓄有",
+      "gen_error": null
+    },
+    {
+      "btype": "creative",
+      "id": "creative-1",
+      "model": "Gcable-Max",
+      "score": 7.0,
+      "judge_reason": "画面具体、意象含蓄，但关东煮重复出现显冗余，'像谁没说完的话'略套路",
+      "gen_error": null
+    },
+    {
+      "btype": "creative",
+      "id": "creative-1",
+      "model": "Gcable-Max-Thinking",
+      "score": 9.0,
+      "judge_reason": "画面具体、情绪含蓄，'收走一句晚安''没人领取的硬币'意象出色，无直白抒情",
+      "gen_error": null
+    },
+    {
+      "btype": "creative",
+      "id": "creative-1",
+      "model": "GLM-5.1",
+      "score": 7.0,
+      "judge_reason": "画面感强、结构完整，但'孤独''心事'稍直白，'关东煮'重复且收尾略套路",
+      "gen_error": null
+    },
+    {
+      "btype": "creative",
+      "id": "creative-1",
+      "model": "GLM-5.1-Instant",
+      "score": 9.0,
+      "judge_reason": "意象精准含蓄，'放回凌晨''数着过期的时辰'出色，画面感强，无直白抒情",
+      "gen_error": null
+    },
+    {
+      "btype": "creative",
+      "id": "creative-1",
+      "model": "GLM-5.2",
+      "score": 9.0,
+      "judge_reason": "意象新颖含蓄，'饭团贴着今天的保质期'等句有张力，画面与情绪俱佳，略近乎完美",
+      "gen_error": null
+    },
+    {
+      "btype": "creative",
+      "id": "creative-1",
+      "model": "GLM-5.2-High",
+      "score": 8.0,
+      "judge_reason": "画面具体含蓄，比喻新颖；但便利店意象略常见，'烫暖'稍刻意",
+      "gen_error": null
+    },
+    {
+      "btype": "creative",
+      "id": "creative-2",
+      "model": "Gcable-Plus",
+      "score": 8.0,
+      "judge_reason": "三名字皆有东方美学意象，slogan画面感强且贴切；但「深潜」「留白」在同类命名中略显常见，非顶级惊艳。",
+      "gen_error": null
+    },
+    {
+      "btype": "creative",
+      "id": "creative-2",
+      "model": "Gcable-Pro",
+      "score": 9.0,
+      "judge_reason": "三名均有意象与差异化，slogan贴切雅致，避开俗套词汇，整体协调有亮点",
+      "gen_error": null
+    },
+    {
+      "btype": "creative",
+      "id": "creative-2",
+      "model": "Gcable-Plus-Thinking",
+      "score": 2.0,
+      "judge_reason": "只输出脑暴过程，未给出最终3个名字+slogan的成品，答非所问且无完整交付",
+      "gen_error": null
+    },
+    {
+      "btype": "creative",
+      "id": "creative-2",
+      "model": "Gcable-Max",
+      "score": 9.0,
+      "judge_reason": "三个名字角度各异且避开套路，slogan意象贴切有画面感，留白稍常见但整体协调出色",
+      "gen_error": null
+    },
+    {
+      "btype": "creative",
+      "id": "creative-2",
+      "model": "Gcable-Pro-Thinking",
+      "score": 9.0,
+      "judge_reason": "三个名字均新颖有辨识度，slogan 与名字意象贴合，整体风格统一，几乎无套话",
+      "gen_error": null
+    },
+    {
+      "btype": "creative",
+      "id": "creative-2",
+      "model": "Gcable-Max-Thinking",
+      "score": 9.0,
+      "judge_reason": "三个名字意象独特有辨识度，slogan贴切且有巧思，整体路线多样协调，无明显短板",
+      "gen_error": null
+    },
+    {
+      "btype": "creative",
+      "id": "creative-1",
+      "model": "GLM-5.2-Max",
+      "score": 0.0,
+      "judge_reason": "空回答/调用失败",
+      "gen_error": "empty response (重算)"
+    },
+    {
+      "btype": "creative",
+      "id": "creative-2",
+      "model": "GLM-5.1",
+      "score": 9.0,
+      "judge_reason": "三个名字均有巧思，留白、此刻主义、蜻蜓点水slogan贴切，意境与差异化思路清晰",
+      "gen_error": null
+    },
+    {
+      "btype": "creative",
+      "id": "creative-2",
+      "model": "GLM-5.2",
+      "score": 9.0,
+      "judge_reason": "三个名字辨识度高，各有气质路线，slogan贴切有巧思，整体协调，无明显扣分点。",
+      "gen_error": null
+    },
+    {
+      "btype": "creative",
+      "id": "creative-2",
+      "model": "GLM-5.1-Instant",
+      "score": 9.0,
+      "judge_reason": "三个名字路数各异且有记忆点，slogan贴切有巧思，避开了红海词汇，整体协调出色",
+      "gen_error": null
+    },
+    {
+      "btype": "creative",
+      "id": "creative-2",
+      "model": "Gcable-Pro-Thinking-Max",
+      "score": 2.0,
+      "judge_reason": "仅是未完成的思考草稿，未输出3个最终名字+slogan的成品，答非所问",
+      "gen_error": null
+    },
+    {
+      "btype": "creative",
+      "id": "creative-2",
+      "model": "GLM-5.2-High",
+      "score": 9.0,
+      "judge_reason": "三个名字均有辨识度且路线各异，slogan贴切有巧思；仅第2名展示改名过程略显冗余",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-1",
+      "model": "Gcable-Plus-Thinking",
+      "score": 9.0,
+      "judge_reason": "概念准确无混淆，区别清晰，例子贴近生活，还指出个别商品价格变化不等于通胀/通缩，非常严谨",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-1",
+      "model": "Gcable-Plus",
+      "score": 9.0,
+      "judge_reason": "概念准确无混淆，区别清晰，例子贴切且自觉说明手机降价非真正通缩，仅结构略冗长。",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-1",
+      "model": "Gcable-Pro-Thinking",
+      "score": 9.0,
+      "judge_reason": "概念准确无混淆，区别清晰，例子贴近生活且体现通缩危害，仅表述略显简单",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-1",
+      "model": "Gcable-Pro",
+      "score": 8.0,
+      "judge_reason": "概念准确、区别清晰、总结到位；但手机降价属单品价格波动而非总体物价水平下降，例子稍欠严谨",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-1",
+      "model": "Gcable-Max",
+      "score": 9.0,
+      "judge_reason": "概念准确无混淆，区别清晰，例子贴切且含购买力计算与通缩恶性循环，表述优秀",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-1",
+      "model": "Gcable-Max-Thinking",
+      "score": 9.0,
+      "judge_reason": "概念准确无混淆，区别清晰，例子贴近生活且有延伸讲解，几乎无可挑剔",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-1",
+      "model": "Gcable-Pro-Thinking-Max",
+      "score": 9.0,
+      "judge_reason": "概念准确无混淆，区别清楚，例子贴近生活并附对比表；扣1分因通缩例子仅单一商品降价，未强调物价总体持续下跌",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-1",
+      "model": "GLM-5.1",
+      "score": 9.0,
+      "judge_reason": "概念准确无混淆，区别清晰，例子贴近生活且体现通缩恶性循环，略有套路化",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-1",
+      "model": "GLM-5.1-Instant",
+      "score": 9.0,
+      "judge_reason": "概念准确无混淆，区别清晰，奶茶和房价例子贴切，还补充了通缩循环机制，几乎无瑕疵。",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-1",
+      "model": "GLM-5.2",
+      "score": 10.0,
+      "judge_reason": "概念准确无混淆，区别清晰，煎饼和手机降价例子贴切，还点明通缩恶性循环，优秀",
+      "gen_error": null
+    },
+    {
+      "btype": "creative",
+      "id": "creative-2",
+      "model": "GLM-5.2-Max",
+      "score": 0.0,
+      "judge_reason": "空回答/调用失败",
+      "gen_error": "empty response (重算)"
+    },
+    {
+      "btype": "general",
+      "id": "general-1",
+      "model": "GLM-5.2-High",
+      "score": 9.0,
+      "judge_reason": "概念准确无混淆，区别清晰，例子贴切生动；通缩例子偏假设性略有不足",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-2",
+      "model": "Gcable-Plus-Thinking",
+      "score": 9.0,
+      "judge_reason": "准确指出混淆任务与职业的核心漏洞，列出隐藏前提并逐一批驳，论证有条理且给出合理结论，几乎无可挑剔。",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-2",
+      "model": "Gcable-Pro",
+      "score": 9.0,
+      "judge_reason": "准确指出混淆任务替代与职业替代等核心漏洞，论证结构清晰、有类比有例证，非空喊。",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-2",
+      "model": "Gcable-Plus",
+      "score": 9.0,
+      "judge_reason": "准确指出混淆任务与职业替代的漏洞，论证分层清晰有类比与史料，仅类比略有堆砌",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-2",
+      "model": "Gcable-Pro-Thinking",
+      "score": 9.0,
+      "judge_reason": "准确指出混淆'任务自动化'与'职业替代'的漏洞，论证有条理、类比恰当，几乎无扣分点。",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-2",
+      "model": "Gcable-Max",
+      "score": 9.0,
+      "judge_reason": "准确点出'替代任务≠替代职业'核心漏洞，结构清晰含逻辑重构，论证扎实仅类比略显常见",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-1",
+      "model": "GLM-5.2-Max",
+      "score": 0.0,
+      "judge_reason": "空回答/调用失败",
+      "gen_error": "empty response (重算)"
+    },
+    {
+      "btype": "general",
+      "id": "general-2",
+      "model": "Gcable-Pro-Thinking-Max",
+      "score": 9.0,
+      "judge_reason": "准确点出混淆'部分任务替代'与'职业替代'的漏洞，三层论证有条理，类比恰当且有结论升华",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-2",
+      "model": "Gcable-Max-Thinking",
+      "score": 9.0,
+      "judge_reason": "(解析异常) {\"score\": 9, \"reason\": \"精准点出\"环节自动化≠职业替代\"",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-2",
+      "model": "GLM-5.1",
+      "score": 9.0,
+      "judge_reason": "精准还原隐藏前提'程序员价值=写代码'，含任务/职业混淆、责任层级、杰文斯悖论，论证严谨有条理",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-2",
+      "model": "GLM-5.1-Instant",
+      "score": 9.0,
+      "judge_reason": "准确拆解隐含前提，指出'能做'≠'替代职业'的逻辑跳跃，论证层次分明且有历史类比，还承认合理部分，几乎无短板。",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-2",
+      "model": "GLM-5.2",
+      "score": 9.0,
+      "judge_reason": "(解析异常) {\"score\": 9, \"reason\": \"精准点出\"部分任务≠整个职业\"核",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-2",
+      "model": "GLM-5.2-High",
+      "score": 9.0,
+      "judge_reason": "精准还原三段论并定位大前提漏洞，论证层层递进含历史反例与杰文斯悖论，公允承认对方合理部分，无空喊。",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-hard",
+      "model": "Gcable-Plus-Thinking",
+      "score": 9.0,
+      "judge_reason": "三特性准确，解释了P必选及C/A权衡逻辑，CP/AP实例贴切，无明显扣分点。",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-2",
+      "model": "GLM-5.2-Max",
+      "score": 0.0,
+      "judge_reason": "空回答/调用失败",
+      "gen_error": "empty response (重算)"
+    },
+    {
+      "btype": "general",
+      "id": "general-hard",
+      "model": "Gcable-Plus",
+      "score": 8.0,
+      "judge_reason": "三特性解释准确，P必选及C/A权衡论述清晰，银行/购物车例子贴切；但'CA选择(AP)'标注自相矛盾，扣分",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-hard",
+      "model": "Gcable-Max",
+      "score": 9.0,
+      "judge_reason": "三特性准确，解释了P必选及C/A取舍逻辑，CP/AP举例贴切，内容完整无明显扣分点",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-hard",
+      "model": "Gcable-Pro",
+      "score": 6.0,
+      "judge_reason": "CAP解释和P必选逻辑正确，但Cassandra实为AP系统，例子事实错误扣分",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-hard",
+      "model": "Gcable-Max-Thinking",
+      "score": 8.0,
+      "judge_reason": "内容准确完整，P必选解释清晰，例子贴切；但超出300字限制且例子稍冗长",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-hard",
+      "model": "GLM-5.1",
+      "score": 8.0,
+      "judge_reason": "概念准确，P必选解释清楚，例子贴切；但篇幅明显超过300字限制，轻微扣分",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-hard",
+      "model": "Gcable-Pro-Thinking",
+      "score": 9.0,
+      "judge_reason": "准确说明P必选及C/A取舍原因，Kafka与DynamoDB举例贴切，无概念错误",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-hard",
+      "model": "GLM-5.1-Instant",
+      "score": 9.0,
+      "judge_reason": "三特性准确，P必选解释清晰，AP例贴切；MySQL称CA稍欠严谨，篇幅略超",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-hard",
+      "model": "Gcable-Pro-Thinking-Max",
+      "score": 9.0,
+      "judge_reason": "三特性准确，说明P必选及CA矛盾原因，ZooKeeper/Cassandra例子贴切；ZooKeeper少数派'不可读'",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-hard",
+      "model": "GLM-5.2",
+      "score": 9.0,
+      "judge_reason": "三特性准确,明确解释P必选故在C/A间取舍,例子贴切;仅字数略超300字",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-hard",
+      "model": "GLM-5.2-High",
+      "score": 8.0,
+      "judge_reason": "概念准确，解释P必选并在C/A间取舍，例子贴切；但超出300字限制，MySQL例子表述略混乱",
+      "gen_error": null
+    },
+    {
+      "btype": "general",
+      "id": "general-hard",
+      "model": "GLM-5.2-Max",
+      "score": 0.0,
+      "judge_reason": "空回答/调用失败",
+      "gen_error": "empty response (重算)"
+    }
+  ]
+}

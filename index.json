@@ -1,0 +1,15 @@
+{
+  "current": "v3",
+  "versions": {
+    "v3": {
+      "testset": "evals/v3/testset.json",
+      "result": "evals/v3/result.json",
+      "evaluated_at": "2026-10-10T17:59+08:00",
+      "judge": "Gcable-Max-Thinking",
+      "questions": 15,
+      "models": 12,
+      "applied_to_config": true,
+      "note": "当前生产评分表"
+    }
+  }
+}

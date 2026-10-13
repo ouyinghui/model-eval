@@ -24,6 +24,7 @@ import urllib.request
 import urllib.error
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
+from datetime import datetime
 
 HERE = Path(__file__).parent
 
@@ -151,6 +152,9 @@ def main() -> int:
     ap.add_argument("--timeout", type=int, default=180, help="单次调用超时秒")
     ap.add_argument("--out", default=str(HERE / "eval_result.json"))
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--apply", action="store_true", help="把评分表写进 router_config.json (需 --config)")
+    ap.add_argument("--config", default="", help="router_config.json 路径 (--apply 用)")
+    ap.add_argument("--version", default="", help="评估批次号 (如 v4, 写入 capabilities_meta)")
     args = ap.parse_args()
 
     if not args.judge:
@@ -235,6 +239,41 @@ def main() -> int:
     fails = {m: sum(1 for r in results if r["model"]==m and r["gen_error"]) for m in models}
     if any(fails.values()):
         print("  超时/失败:", {m: n for m, n in fails.items() if n})
+
+    # --apply: 写进 router_config + capabilities_meta
+    if args.apply:
+        if not args.config:
+            print("✗ --apply 需 --config <router_config.json>", file=sys.stderr)
+            return 1
+        import copy
+        cfg = json.load(open(args.config))
+        if "models" not in cfg:
+            print("✗ config 无 models 字段", file=sys.stderr)
+            return 1
+        applied, skipped = [], []
+        for m, row in table.items():
+            if m not in cfg["models"]:
+                skipped.append(f"{m}(不在config)"); continue
+            if any(v is None for v in row.values()):
+                skipped.append(f"{m}(有空格/不可靠)"); continue
+            cfg["models"][m]["capabilities"] = {bt: v for bt, v in row.items()}
+            applied.append(m)
+        # capabilities_meta 元信息
+        version = args.version or f"v{datetime.now().strftime('%y%m%d')}"
+        cfg["capabilities_meta"] = {
+            "source": "model-eval",
+            "version": version,
+            "evaluated_at": datetime.now().astimezone().isoformat(timespec="seconds"),
+            "judge": args.judge,
+            "testset": f"{len(btypes)}类/{sum(1 for _ in [t for bt in btypes for t in testset[bt]])}题",
+            "models_count": len(applied),
+            "excluded": skipped,
+        }
+        json.dump(cfg, open(args.config, "w"), ensure_ascii=False, indent=2)
+        print(f"\n  ✓ --apply: 写入 {args.config}")
+        print(f"    applied {len(applied)} 模型, meta.version={version}")
+        if skipped:
+            print(f"    skipped: {skipped}")
     return 0
 
 
