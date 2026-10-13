@@ -194,7 +194,10 @@ def main() -> int:
                           base_url=base, max_tokens=2048, timeout=args.timeout): t for t in tasks}
         for f in as_completed(futs):
             t = futs[f]; r = f.result()
-            t.update({"answer": r["text"], "gen_error": r["error"], "gen_ms": r["ms"]})
+            err = r["error"]
+            if not err and not (r["text"] or "").strip():
+                err = "empty response (无内容)"
+            t.update({"answer": r["text"], "gen_error": err, "gen_ms": r["ms"]})
             results.append(t); done += 1
             if done % 10 == 0 or done == len(tasks):
                 print(f"  {done}/{len(tasks)}")
